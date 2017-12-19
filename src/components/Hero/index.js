@@ -7,7 +7,6 @@ class Hero extends Component {
     return (
       <div>
         <HeroNavBar />
-        <h1>Hero</h1>
       </div>
     );
   }
