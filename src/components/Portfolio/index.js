@@ -9,9 +9,6 @@ class PortfolioComponent extends Component {
       <div>
         <OurWorkHeader />
         <PortfolioCard />
-        <PortfolioCard />
-        <PortfolioCard />
-        <PortfolioCard />
       </div>
     );
   }
