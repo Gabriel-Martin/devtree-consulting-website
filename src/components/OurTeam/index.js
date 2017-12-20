@@ -15,21 +15,25 @@ class OurTeam extends Component {
         </HeaderRow>
         <CardRow>
           <TeamMemberCard
+            barColor={"#88498F"}
             name={"Isaiah Grey"}
             image={"images/team/Isaiah.jpg"}
             position={"Co-Founder | Lead Developer"}
           />
           <TeamMemberCard
+            barColor={"#2BD1B5"}
             name={"Chris Nicolls"}
             image={"images/team/Chris.jpg"}
             position={"Co-Founder | Project Manager"}
           />
           <TeamMemberCard
+            barColor={"#2185DB"}
             position={"Developer"}
             name={"Calvin Rafferty"}
             image={"images/team/Calvin.jpg"}
           />
           <TeamMemberCard
+            barColor={"#C8473A"}
             position={"Developer"}
             name={"Gabriel Martin"}
             image={"images/team/Gabe.jpg"}

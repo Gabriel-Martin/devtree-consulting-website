@@ -24,15 +24,16 @@ class OurPhilosophy extends Component {
 export default OurPhilosophy;
 
 const Text = glamorous.div({
-  display: "flex",
-  flexDirection: "column",
   flex: 1,
-  justifyContent: "center",
-  fontSize: 20
+  fontSize: 20,
+  display: "flex",
+  justifyContent: "center"
 });
 const Container = glamorous.div({
+  flex: 1,
   height: 220,
+  height: "auto",
   display: "flex",
-  flexDirection: "row",
-  flex: 1
+  flexDirection: "column",
+  margin: "0px 100px 40px 100px"
 });

@@ -5,7 +5,7 @@ import glamorous from "glamorous";
 const TeamMemberCard = props => {
   return (
     <Card>
-      <ImgWell>
+      <ImgWell barColor={props.barColor}>
         <Img src={props.image} />
       </ImgWell>
       <CardFooter>
@@ -18,18 +18,26 @@ const TeamMemberCard = props => {
 
 export default TeamMemberCard;
 
-const Card = glamorous.div({
+const Card = glamorous.div(props => ({
   width: 242,
+  margin: 20,
   display: "flex",
   flexDirection: "column",
   boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)"
-});
+}));
 
-const ImgWell = glamorous.div({
+const ColorBar = glamorous.div(props => ({
+  flex: 1,
+  height: 1,
+  backgroundColor: props.color
+}));
+
+const ImgWell = glamorous.div(props => ({
   height: 300,
   width: "100%",
-  overflow: "hidden"
-});
+  overflow: "hidden",
+  borderBottom: `5px solid ${props.barColor}`
+}));
 
 const Img = glamorous.img({
   width: "100%",
