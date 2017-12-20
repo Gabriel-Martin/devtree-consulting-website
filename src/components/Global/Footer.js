@@ -7,7 +7,9 @@ class Footer extends Component {
   render() {
     return (
       <Container>
-        <LogoCol>devtree consulting</LogoCol>
+        <LogoCol>
+          <Img src={"images/general/hero-logo.png"} />
+        </LogoCol>
         <ContactCol>
           <Item>CONTACT US</Item>
           <Item>123-456-7890</Item>
@@ -42,6 +44,12 @@ class Footer extends Component {
 
 export default Footer;
 
+const Img = glamorous.img({
+  width: 400,
+  height: "auto",
+  margin: "0px 40px"
+});
+
 const Container = glamorous.div({
   height: 230,
   width: "100%",
@@ -55,8 +63,7 @@ const LogoCol = glamorous.div({
   padding: 10,
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "flex-start"
+  justifyContent: "center"
 });
 
 const ContactCol = glamorous.div({
