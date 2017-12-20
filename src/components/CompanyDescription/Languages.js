@@ -1,27 +1,32 @@
 import React, { Component } from "react";
+
 import glamorous from "glamorous";
 
-class Langueages extends Component {
+class Languages extends Component {
   render() {
     return (
       <Container>
-        <img src={"images/language-icons/react.png"} />
-        <img src={"images/language-icons/css3.png"} />
-        <img src={"images/language-icons/git.png"} />
-        <img src={"images/language-icons/html5.png"} />
-        <img src={"images/language-icons/nodejs.png"} />
-        <img src={"images/language-icons/npm.png"} />
+        <Img src={"images/language-icons/react.png"} />
+        <Img src={"images/language-icons/css3.png"} />
+        <Img src={"images/language-icons/git.png"} />
+        <Img src={"images/language-icons/html5.png"} />
+        <Img src={"images/language-icons/nodejs.png"} />
       </Container>
     );
   }
 }
 
-export default Langueages;
+export default Languages;
+
 const Container = glamorous.div({
   height: 115,
-  width: 1440,
-  backgroundColor: "#4C4C4D",
   display: "flex",
-  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: "#4C4C4D",
   justifyContent: "space-around"
+});
+
+const Img = glamorous.img({
+  width: 50,
+  height: "auto"
 });

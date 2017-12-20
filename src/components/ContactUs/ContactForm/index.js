@@ -11,8 +11,8 @@ class ContactForm extends Component {
       <div>
         <FormSteps />
         <Name />
-        <Summary />
         <GeneralInfo />
+        <Summary />
       </div>
     );
   }

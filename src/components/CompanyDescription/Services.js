@@ -31,13 +31,11 @@ const Line = glamorous.hr({
 });
 
 const Container1 = glamorous.div({
-  width: 1440,
   height: 150,
   backgroundColor: "#C7C7C7"
 });
 
 const Container2 = glamorous.div({
-  width: 1440,
   height: 137,
   backgroundColor: "#C7C7C7"
 });

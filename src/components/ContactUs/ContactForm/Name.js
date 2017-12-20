@@ -1,13 +1,37 @@
+import glamorous from "glamorous";
+import { Form, Input, Button } from "antd";
+
 import React, { Component } from "react";
 
-class Name extends Component {
+class GeneralInfo extends Component {
   render() {
     return (
-      <div>
-        <h1>name</h1>
-      </div>
+      <Container>
+        <Form>
+          <Form.Item>
+            <Input placeholder={"First Name"} />
+          </Form.Item>
+          <Form.Item>
+            <Input placeholder={"Last Name"} />
+          </Form.Item>
+          <Form.Item>
+            <Button
+              type={"primary"}
+              htmlType={"submit"}
+              style={{ backgroundColor: "#23BAA1" }}
+            >
+              Next
+            </Button>
+          </Form.Item>
+        </Form>
+      </Container>
     );
   }
 }
 
-export default Name;
+export default GeneralInfo;
+
+const Container = glamorous.div({
+  display: "flex",
+  flexDirection: "column"
+});

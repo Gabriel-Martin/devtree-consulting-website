@@ -17,14 +17,13 @@ const Text = glamorous.h1({
 });
 
 const Container = glamorous.div({
-  width: 1440,
-  height: 230,
   flex: 1,
-  flexDirection: "row",
+  height: 230,
   display: "flex",
+  alignItems: "center",
   backgroundSize: "cover",
-  backgroundImage:
-    "linear-gradient(to bottom, rgba(38,84,124,0.54), rgba(38,84,124,0.54)), url(images/team-photos/build-process.jpg)",
   justifyContent: "center",
-  alignItems: "center"
+  backgroundPositionY: "-100px",
+  backgroundImage:
+    "linear-gradient(to bottom, rgba(38,84,124,0.54), rgba(38,84,124,0.54)), url(images/team/build-process.jpg)"
 });

@@ -1,96 +1,121 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
+
+// class TeamMemberCard extends Component {
+//   render() {
+//     return (
+//       <Container>
+//         <Card1>
+//           <ImgWell>
+//             <Img src={"images/team/Isaiah.jpg"} />
+//           </ImgWell>
+//           <CardFooter>
+//             <Name>Isaiah Grey</Name>
+//             <Role>Co-Founder | Lead Developer</Role>
+//           </CardFooter>
+//         </Card1>
+//         <Card2>
+//           <ImgWell>
+//             <Img src={"images/team/Chris.jpg"} />
+//           </ImgWell>
+//           <CardFooter>
+//             <Name>Isaiah Grey</Name>
+//             <Role>Co-Founder | Lead Developer</Role>
+//           </CardFooter>
+//         </Card2>
+//         <Card3>
+//           <ImgWell>
+//             <Img src={"images/team/Calvin.jpg"} />
+//           </ImgWell>
+//           <CardFooter>
+//             <Name>Isaiah Grey</Name>
+//             <Role>Co-Founder | Lead Developer</Role>
+//           </CardFooter>
+//         </Card3>
+//         <Card4>
+//           <ImgWell>
+//             <Img src={"images/team/Gabe.jpg"} />
+//           </ImgWell>
+//           <CardFooter>
+//             <Name>Isaiah Grey</Name>
+//             <Role>Co-Founder | Lead Developer</Role>
+//           </CardFooter>
+//         </Card4>
+//       </Container>
+//     );
+//   }
+// }
+
+// export default TeamMemberCard;
+
+import React from "react";
+
 import glamorous from "glamorous";
-class TeamMemberCard extends Component {
-  render() {
-    return (
-      <Container>
-        <Row1>
-          <Card1 />
-          <Card2 />
-          <Card3 />
-          <Card4 />
-        </Row1>
-        <Column>
-          <Text>Our Philosophy</Text>
-          <Phil>
-            It’s about making placeholder text great again. That’s what people
-            want, they want placeholder text to be great again. An 'extremely
-            credible source' has called my office and told me that Lorem Ipsum's
-            birth certificate is a fraud.
-          </Phil>
-        </Column>
-      </Container>
-    );
-  }
-}
+
+const TeamMemberCard = props => {
+  return <div>card</div>;
+};
 
 export default TeamMemberCard;
 
-const Text = glamorous.h1({
-  padding: "30px"
+const ImgWell = glamorous.div({
+  height: 300,
+  width: "100%",
+  overflow: "hidden"
 });
 
-const Phil = glamorous.div({
-  textAlign: "center"
+const Img = glamorous.img({
+  width: "100%",
+  height: "auto",
+  filter: "grayscale(100%)"
+});
+
+const CardFooter = glamorous.div({
+  flex: 1,
+  display: "flex",
+  flexDirection: "column"
+});
+
+const Name = glamorous.div({
+  margin: "1px 3px"
+});
+
+const Role = glamorous.div({
+  margin: "1px 3px"
 });
 
 const Container = glamorous.div({
   flex: 1,
-  flexDirection: "column",
+  padding: 5,
   display: "flex",
-  width: 1440,
-  height: 614
-});
-
-const Row1 = glamorous.div({
-  flex: 1,
   flexDirection: "row",
-  justifyContent: "space-between",
-  margin: 5,
-  display: "flex"
-});
-
-const Column = glamorous.div({
-  flex: 1,
-  flexDirection: "column",
-  display: "flex"
+  flexFlow: "row wrap",
+  justifyContent: "space-around"
 });
 
 const Card1 = glamorous.div({
-  backgroundSize: "cover",
-  backgroundImage: 'url("images/team-photos/Isaiah.jpg")',
+  width: 242,
   display: "flex",
   flexDirection: "column",
-  width: 242,
-  height: 346
+  boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)"
 });
 
 const Card2 = glamorous.div({
-  backgroundSize: "cover",
-
-  backgroundImage: 'url("images/team-photos/Chris 0120.jpg")',
+  width: 242,
   display: "flex",
   flexDirection: "column",
-  width: 242,
-  height: 346
+  boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)"
 });
 
 const Card3 = glamorous.div({
-  backgroundSize: "cover",
-
-  backgroundImage: 'url("images/team-photos/Gabe 0110.jpg")',
+  width: 242,
   display: "flex",
   flexDirection: "column",
-  width: 242,
-  height: 346
+  boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)"
 });
 
 const Card4 = glamorous.div({
-  backgroundSize: "cover",
-
-  backgroundImage: 'url("images/team-photos/Calvin.jpg")',
+  width: 242,
   display: "flex",
   flexDirection: "column",
-  width: 242,
-  height: 346
+  boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)"
 });
