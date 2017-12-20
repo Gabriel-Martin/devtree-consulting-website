@@ -4,6 +4,7 @@ import glamorous from "glamorous";
 
 import OurTeamHeader from "./OurTeamHeader";
 import TeamMemberCard from "./TeamMemberCard";
+import OurPhilosophy from "./OurPhilosophy";
 
 class OurTeam extends Component {
   render() {
@@ -34,6 +35,7 @@ class OurTeam extends Component {
             image={"images/team/Gabe.jpg"}
           />
         </CardRow>
+        <OurPhilosophy />
       </Container>
     );
   }
