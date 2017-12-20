@@ -9,9 +9,6 @@ class OurTeam extends Component {
       <div>
         <OurTeamHeader />
         <TeamMemberCard />
-        <TeamMemberCard />
-        <TeamMemberCard />
-        <TeamMemberCard />
       </div>
     );
   }

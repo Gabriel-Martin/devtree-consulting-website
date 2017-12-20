@@ -1,13 +1,54 @@
 import React, { Component } from "react";
-
+import glamorous from "glamorous";
 class TeamMemberCard extends Component {
   render() {
     return (
-      <div>
-        <h1>Team Member Card</h1>
-      </div>
+      <Container>
+        <Card1 />
+        <Card2 />
+        <Card3 />
+        <Card4 />
+      </Container>
     );
   }
 }
 
 export default TeamMemberCard;
+
+const Container = glamorous.div({
+  flex: 1,
+  flexDirection: "row",
+  display: "flex",
+  flexFlow: "row wrap",
+  padding: 5,
+  justifyContent: "space-between"
+});
+
+const Card1 = glamorous.div({
+  backgroundImage: 'url("images/projects/project-1.png")',
+  display: "flex",
+  flexDirection: "column",
+  width: 465,
+  height: 470
+});
+const Card2 = glamorous.div({
+  backgroundImage: 'url("images/projects/project-2.png")',
+  display: "flex",
+  flexDirection: "column",
+  width: 465,
+  height: 470
+});
+const Card3 = glamorous.div({
+  backgroundImage: 'url("images/projects/project-3.png")',
+  display: "flex",
+  flexDirection: "column",
+  width: 465,
+  height: 470
+});
+const Card4 = glamorous.div({
+  backgroundImage: 'url("images/projects/project-4.png")',
+  display: "flex",
+  flexDirection: "column",
+  width: 465,
+  height: 470
+});
