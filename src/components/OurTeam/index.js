@@ -1,5 +1,6 @@
 import OurTeamHeader from "./OurTeamHeader";
 import TeamMemberCard from "./TeamMemberCard";
+import OurPhilosophy from "./OurPhilosophy";
 
 import React, { Component } from "react";
 
@@ -9,6 +10,7 @@ class OurTeam extends Component {
       <div>
         <OurTeamHeader />
         <TeamMemberCard />
+        <OurPhilosophy />
       </div>
     );
   }
