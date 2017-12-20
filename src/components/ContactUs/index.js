@@ -1,17 +1,25 @@
-import ContactUsHeader from "./ContactUsHeader";
 import ContactForm from "./ContactForm";
+import ContactUsHeader from "./ContactUsHeader";
+
+import glamorous from "glamorous";
 
 import React, { Component } from "react";
 
 class ContactUsComponent extends Component {
   render() {
     return (
-      <div>
+      <Container>
         <ContactUsHeader />
         <ContactForm />
-      </div>
+      </Container>
     );
   }
 }
 
 export default ContactUsComponent;
+
+const Container = glamorous.div({
+  display: "flex",
+  alignItems: "center",
+  flexDirection: "column"
+});
