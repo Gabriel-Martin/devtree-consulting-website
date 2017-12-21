@@ -14,10 +14,10 @@ class HeroNavBar extends Component {
 
           <NavContainer>
             <Item>
-              <HLink to={"#process"}>Process</HLink>
+              <HashLink to={"#process"}>Process</HashLink>
             </Item>
             <Item>
-              <HLink to={"#our-team"}>Our Team</HLink>
+              <HashLink to={"#our-team"}>Our Team</HashLink>
             </Item>
             <Item>
               <NavLink to={"/portfolio"}>Portfolio</NavLink>
@@ -61,7 +61,6 @@ const Logo = glamorous.img({
 const NavContainer = glamorous.div(props => ({
   flex: 1,
   display: "flex",
-  display: "flex",
   justifyContent: "flex-end"
 }));
 
@@ -73,6 +72,11 @@ const Item = glamorous.div({
 });
 
 const NavLink = glamorous(Link)(props => ({
+  color: "#f1efef",
+  textDecoration: "none !important"
+}));
+
+const HashLink = glamorous(HLink)(props => ({
   color: "#f1efef",
   textDecoration: "none !important"
 }));

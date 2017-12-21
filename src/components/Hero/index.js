@@ -27,19 +27,19 @@ const Container = glamorous.div({
     "linear-gradient(to bottom, rgba(0, 148, 255, 0.1), rgba(0, 0, 0, 0.8)), url(images/general/hero.jpg)"
 });
 
-const NavCol = glamorous.div({
-  flex: 1,
-  display: "flex",
-  alignItems: "flex-end",
-  flexDirection: "column"
-});
+// const NavCol = glamorous.div({
+//   flex: 1,
+//   display: "flex",
+//   alignItems: "flex-end",
+//   flexDirection: "column"
+// });
 
-const LogoCol = glamorous.div({
-  flex: 1,
-  display: "flex",
-  // alignItems: "center",
-  flexDirection: "column"
-});
+// const LogoCol = glamorous.div({
+//   flex: 1,
+//   display: "flex",
+//   // alignItems: "center",
+//   flexDirection: "column"
+// });
 
 const HeaderRow = glamorous.div({
   flex: 1,

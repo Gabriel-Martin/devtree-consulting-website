@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { NavLink, withRouter } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { NavLink as Link, withRouter } from "react-router-dom";
+import { HashLink as HLink } from "react-router-hash-link";
 import glamorous from "glamorous";
 
 class HeroNavBar extends Component {
@@ -9,7 +9,10 @@ class HeroNavBar extends Component {
       <Container>
         <NavBar>
           <LogoContainer>
-            <Logo src={"images/general/nav-logo.png"} />
+            <Logo
+              src={"images/general/nav-logo.png"}
+              onClick={() => this.props.history.push("/")}
+            />
           </LogoContainer>
 
           <NavContainer>
@@ -61,7 +64,6 @@ const Logo = glamorous.img({
 const NavContainer = glamorous.div(props => ({
   flex: 1,
   display: "flex",
-  display: "flex",
   justifyContent: "flex-end"
 }));
 
@@ -71,5 +73,15 @@ const Item = glamorous.div({
   fontWeight: 100,
   color: "#F2F2F2"
 });
+
+const NavLink = glamorous(Link)(props => ({
+  color: "black",
+  textDecoration: "none !important"
+}));
+
+const HashLink = glamorous(HLink)(props => ({
+  color: "black",
+  textDecoration: "none !important"
+}));
 
 export default withRouter(HeroNavBar);
