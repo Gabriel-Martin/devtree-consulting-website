@@ -26,12 +26,6 @@ const Card = glamorous.div(props => ({
   boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)"
 }));
 
-const ColorBar = glamorous.div(props => ({
-  flex: 1,
-  height: 1,
-  backgroundColor: props.color
-}));
-
 const ImgWell = glamorous.div(props => ({
   height: 300,
   width: "100%",

@@ -31,7 +31,6 @@ const Text = glamorous.div({
 });
 const Container = glamorous.div({
   flex: 1,
-  height: 220,
   height: "auto",
   display: "flex",
   flexDirection: "column",

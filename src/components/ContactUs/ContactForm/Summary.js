@@ -1,7 +1,7 @@
-import glamorous, { Textarea } from "glamorous";
-import { Form, Input, Button } from "antd";
-
 import React, { Component } from "react";
+
+import glamorous from "glamorous";
+import { Form, Input, Button } from "antd";
 
 const { TextArea } = Input;
 
@@ -14,7 +14,7 @@ class GeneralInfo extends Component {
             <Input placeholder={"How did you hear about us?"} />
           </Form.Item>
           <Form.Item>
-            <Textarea
+            <TextArea
               style={{ width: "100%" }}
               placeholder={
                 "Leave us a brief message. We will contact you as soon as possible"
