@@ -6,7 +6,7 @@ import React, { Component } from "react";
 class BuildProcess extends Component {
   render() {
     return (
-      <div>
+      <div id={"process"}>
         <BuildProcessHeader />
         <BuildProcessSteps />
       </div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import glamorous from "glamorous";
 
 class HeroNavBar extends Component {
@@ -10,7 +11,9 @@ class HeroNavBar extends Component {
           <NavLink to={"/"}>Home</NavLink>
         </Item>
         <Item>About Us</Item>
-        <Item>Process</Item>
+        <Item>
+          <HashLink to={"/#process"}>Process</HashLink>
+        </Item>
         <Item>Our Team</Item>
         <Item>
           <NavLink to={"/contact-us"}>Contact</NavLink>

@@ -10,7 +10,6 @@ class Router extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Route path={"/.."} component={Navbar} />
           <Route exact path={"/"} component={Home} />
           <Route exact path={"/portfolio"} component={Portfolio} />
           <Route exact path={"/contact-us"} component={ContactUs} />
