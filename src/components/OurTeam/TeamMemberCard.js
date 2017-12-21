@@ -36,7 +36,14 @@ const ImgWell = glamorous.div(props => ({
 const Img = glamorous.img({
   width: "100%",
   height: "auto",
-  filter: "grayscale(100%)"
+  filter: "grayscale(100%)",
+  transitionTimingFunction: "linear",
+  transitionDuration: ".5s",
+  ":hover": {
+    filter: "none",
+    transitionTimingFunction: "linear",
+    transitionDuration: ".5s"
+  }
 });
 
 const CardFooter = glamorous.div({

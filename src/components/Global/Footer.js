@@ -15,12 +15,10 @@ class Footer extends Component {
             <Link to={"/contact-us"}>Contact Us</Link>
           </Item>
           <Item>
-            <a href={"tel:1-208-597-6466"}>208-597-6466</a>
+            <a href={"tel:1-208-718-2633"}>208-718-2633</a>
           </Item>
           <Item>
-            <a href={"mailto:info@devtree.consulting"}>
-              info@devtree.consulting
-            </a>
+            <a href={"mailto:info@devtree.io"}>info@devtree.io</a>
           </Item>
           <Item>
             1224 Washington Ave, Suite 3 <br /> Sandpoint, Idaho 83864
@@ -51,7 +49,8 @@ export default withRouter(Footer);
 const Img = glamorous.img({
   width: 400,
   height: "auto",
-  margin: "0px 40px"
+  margin: "0px 40px",
+  cursor: "pointer"
 });
 
 const Container = glamorous.div({

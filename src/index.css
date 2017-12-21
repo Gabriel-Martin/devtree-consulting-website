@@ -15,3 +15,7 @@ body {
 .vertical-timeline::before {
   background: #2bd1b5 !important;
 }
+
+.vertical-timeline-element-content {
+  border-top: 5px solid darkcyan;
+}

@@ -25,14 +25,17 @@ class WhoWeAre extends Component {
 
 export default WhoWeAre;
 
-const Line = glamorous.hr({
+const Line = glamorous.div(props => ({
   height: "10px",
   width: "400px",
   backgroundColor: "rgba(43,209,181,1)"
-});
+}));
 
 const Container1 = glamorous.div({
-  height: 150
+  height: 150,
+  alignItems: "center",
+  display: "flex",
+  flexDirection: "column"
 });
 
 const Container2 = glamorous.div({
