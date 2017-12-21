@@ -26,6 +26,7 @@ const Container = glamorous.div({
 
 const Card1 = glamorous.div({
   backgroundImage: 'url("images/projects/project-1.png")',
+  backgroundSize: "cover",
   display: "flex",
   flexDirection: "column",
   width: 465,
@@ -33,6 +34,7 @@ const Card1 = glamorous.div({
 });
 const Card2 = glamorous.div({
   backgroundImage: 'url("images/projects/project-2.png")',
+  backgroundSize: "cover",
   display: "flex",
   flexDirection: "column",
   width: 465,
@@ -40,6 +42,7 @@ const Card2 = glamorous.div({
 });
 const Card3 = glamorous.div({
   backgroundImage: 'url("images/projects/project-3.png")',
+  backgroundSize: "cover",
   display: "flex",
   flexDirection: "column",
   width: 465,
@@ -47,6 +50,7 @@ const Card3 = glamorous.div({
 });
 const Card4 = glamorous.div({
   backgroundImage: 'url("images/projects/project-4.png")',
+  backgroundSize: "cover",
   display: "flex",
   flexDirection: "column",
   width: 465,
@@ -54,6 +58,7 @@ const Card4 = glamorous.div({
 });
 const Card5 = glamorous.div({
   backgroundImage: 'url("images/projects/project-5.png")',
+  backgroundSize: "cover",
   display: "flex",
   flexDirection: "column",
   width: 465,
