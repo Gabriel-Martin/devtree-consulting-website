@@ -1,5 +1,5 @@
 import glamorous from "glamorous";
-import { HashLink } from "react-router-hash-link";
+import { HashLink as HLink } from "react-router-hash-link";
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 
@@ -12,13 +12,13 @@ class Footer extends Component {
         </LogoCol>
         <ContactCol>
           <Item>
-            <Link to={"/contact-us"}>Contact Us</Link>
+            <NavLink to={"/contact-us"}>Contact Us</NavLink>
           </Item>
           <Item>
-            <a href={"tel:1-208-718-2633"}>208-718-2633</a>
+            <Anchor href={"tel:1-208-718-2633"}>208-718-2633</Anchor>
           </Item>
           <Item>
-            <a href={"mailto:info@devtree.io"}>info@devtree.io</a>
+            <Anchor href={"mailto:info@devtree.io"}>info@devtree.io</Anchor>
           </Item>
           <Item>
             1224 Washington Ave, Suite 3 <br /> Sandpoint, Idaho 83864
@@ -30,7 +30,7 @@ class Footer extends Component {
             <HashLink to={"/#who-we-are"}> About Us </HashLink>
           </Item>
           <Item>
-            <Link to={"/portfolio"}> Portfolio </Link>
+            <NavLink to={"/portfolio"}> Portfolio </NavLink>
           </Item>
           <Item>
             <HashLink to={"/#our-team"}> Our Team </HashLink>
@@ -88,3 +88,17 @@ const LinksCol = glamorous.div({
 const Item = glamorous.div({
   margin: 5
 });
+
+const NavLink = glamorous(Link)(props => ({
+  color: "#f1efef",
+  textDecoration: "none !important"
+}));
+
+const HashLink = glamorous(HLink)(props => ({
+  color: "#f1efef",
+  textDecoration: "none !important"
+}));
+const Anchor = glamorous.a(props => ({
+  color: "#f1efef",
+  textDecoration: "none !important"
+}));
