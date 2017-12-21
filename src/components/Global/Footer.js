@@ -1,40 +1,44 @@
 import glamorous from "glamorous";
-
+import { HashLink } from "react-router-hash-link";
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class Footer extends Component {
   render() {
     return (
       <Container>
-        <LogoCol>
+        <LogoCol onClick={() => this.props.history.push("/")}>
           <Img src={"images/general/hero-logo.png"} />
         </LogoCol>
         <ContactCol>
-          <Item>CONTACT US</Item>
-          <Item>123-456-7890</Item>
-          <Item>info@devtree.consulting</Item>
           <Item>
-            1224 Washington Ave, Suite 3 <br /> Sandpoint, Idaho 83864
+            <Link to={"/contact-us"}>Contact Us</Link>
           </Item>
           <Item>
-            <Link to={"/contact-us"}>Message</Link>
+            <a href={"tel:1-208-597-6466"}>208-597-6466</a>
+          </Item>
+          <Item>
+            <a href={"mailto:info@devtree.consulting"}>
+              info@devtree.consulting
+            </a>
+          </Item>
+          <Item>
+            1224 Washington Ave, Suite 3 <br /> Sandpoint, Idaho 83864
           </Item>
         </ContactCol>
 
         <LinksCol>
-          <p>LINKS</p>
           <Item>
-            <Link to={"/"}> Home </Link>
+            <HashLink to={"/#who-we-are"}> About Us </HashLink>
           </Item>
           <Item>
-            <Link to={"/"}> About Us </Link>
+            <Link to={"/portfolio"}> Portfolio </Link>
           </Item>
           <Item>
-            <Link to={"/"}> Our Team </Link>
+            <HashLink to={"/#our-team"}> Our Team </HashLink>
           </Item>
           <Item>
-            <Link to={"/"}> Process </Link>
+            <HashLink to={"/#process"}> Process </HashLink>
           </Item>
         </LinksCol>
       </Container>
@@ -42,7 +46,7 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
+export default withRouter(Footer);
 
 const Img = glamorous.img({
   width: 400,
@@ -55,7 +59,8 @@ const Container = glamorous.div({
   width: "100%",
   display: "flex",
   color: "#F1EFEF",
-  backgroundColor: "rgba(26, 27, 28, 0.78)"
+  backgroundColor: "rgba(26, 27, 28, 0.78)",
+  borderTop: `5px solid #2185DB`
 });
 
 const LogoCol = glamorous.div({

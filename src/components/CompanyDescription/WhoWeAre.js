@@ -5,7 +5,7 @@ class WhoWeAre extends Component {
   render() {
     return (
       <div>
-        <Container1>
+        <Container1 id={"who-we-are"}>
           <Text1>Who We Are</Text1>
           <Line />
         </Container1>
