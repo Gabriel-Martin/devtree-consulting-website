@@ -24,15 +24,18 @@ class Services extends Component {
 
 export default Services;
 
-const Line = glamorous.hr({
+const Line = glamorous.div(props => ({
   height: "10px",
   width: "400px",
   backgroundColor: "rgba(43,209,181,1)"
-});
+}));
 
 const Container1 = glamorous.div({
   height: 150,
-  backgroundColor: "#C7C7C7"
+  backgroundColor: "#C7C7C7",
+  alignItems: "center",
+  display: "flex",
+  flexDirection: "column"
 });
 
 const Container2 = glamorous.div({
