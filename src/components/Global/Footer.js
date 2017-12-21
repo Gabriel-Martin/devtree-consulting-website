@@ -1,6 +1,6 @@
 import glamorous from "glamorous";
 import { HashLink as HLink } from "react-router-hash-link";
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
 
 class Footer extends Component {
@@ -16,43 +16,51 @@ class Footer extends Component {
 
   render() {
     return (
-      <Container>
-        <LogoCol onClick={this.home}>
-          <Img src={"images/general/hero-logo.png"} />
-        </LogoCol>
-        <ContactCol>
-          <Item>
-            <NavLink to={"/contact-us"}>Contact Us</NavLink>
-          </Item>
-          <Item>
-            <Anchor href={"tel:1-208-718-2633"}>208-718-2633</Anchor>
-          </Item>
-          <Item>
-            <Anchor href={"mailto:info@devtree.io"}>info@devtree.io</Anchor>
-          </Item>
-          <Item>
-            1224 Washington Ave, Suite 3 <br /> Sandpoint, Idaho 83864
-          </Item>
-        </ContactCol>
+      <Fragment>
+        <Line />
+        <Container>
+          <LogoCol onClick={this.home}>
+            <Img src={"images/general/hero-logo.png"} />
+          </LogoCol>
+          <ContactCol>
+            <Item>
+              <NavLink to={"/contact-us"}>Contact Us</NavLink>
+            </Item>
+            <Item>
+              <Anchor href={"tel:1-208-718-2633"}>208-718-2633</Anchor>
+            </Item>
+            <Item>
+              <Anchor href={"mailto:info@devtree.io"}>info@devtree.io</Anchor>
+            </Item>
+            <Item>
+              1224 Washington Ave, Suite 3 <br /> Sandpoint, Idaho 83864
+            </Item>
+          </ContactCol>
 
-        <LinksCol>
-          <Item>
-            <HashLink to={"/#who-we-are"}> About Us </HashLink>
-          </Item>
-          <Item>
-            <NavLink to={"/portfolio"}> Portfolio </NavLink>
-          </Item>
-          <Item>
-            <HashLink to={"/#our-team"}> Our Team </HashLink>
-          </Item>
-          <Item>
-            <HashLink to={"/#process"}> Process </HashLink>
-          </Item>
-        </LinksCol>
-      </Container>
+          <LinksCol>
+            <Item>
+              <HashLink to={"/#who-we-are"}> About Us </HashLink>
+            </Item>
+            <Item>
+              <NavLink to={"/portfolio"}> Portfolio </NavLink>
+            </Item>
+            <Item>
+              <HashLink to={"/#our-team"}> Our Team </HashLink>
+            </Item>
+            <Item>
+              <HashLink to={"/#process"}> Process </HashLink>
+            </Item>
+          </LinksCol>
+        </Container>
+      </Fragment>
     );
   }
 }
+
+const Line = glamorous.div(props => ({
+  backgroundImage: "linear-gradient(to right,#88498F,#2BD1B5,#2185DB,#C8473A)",
+  height: "8px"
+}));
 
 const Img = glamorous.img({
   width: 400,
@@ -62,12 +70,11 @@ const Img = glamorous.img({
 });
 
 const Container = glamorous.div({
-  height: 230,
+  height: 226,
   width: "100%",
   display: "flex",
   color: "#F1EFEF",
-  backgroundColor: "rgba(26, 27, 28, 0.78)",
-  borderTop: `5px solid #2185DB`
+  backgroundColor: "rgba(26, 27, 28, 0.78)"
 });
 
 const LogoCol = glamorous.div({
