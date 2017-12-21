@@ -8,14 +8,8 @@ class Hero extends Component {
   render() {
     return (
       <Container>
-        <NavRow>
-          <LogoCol>
-            <Img src={"images/general/hero-logo.png"} />
-          </LogoCol>
-          <NavCol>
-            <HeroNavBar />
-          </NavCol>
-        </NavRow>
+        <HeroNavBar />
+
         <HeaderRow>
           Releasing potential for any <br /> business
         </HeaderRow>
@@ -24,8 +18,6 @@ class Hero extends Component {
   }
 }
 
-export default Hero;
-
 const Container = glamorous.div({
   display: "flex",
   height: "100vh",
@@ -33,12 +25,6 @@ const Container = glamorous.div({
   backgroundSize: "cover",
   backgroundImage:
     "linear-gradient(to bottom, rgba(0, 148, 255, 0.1), rgba(0, 0, 0, 0.8)), url(images/general/hero.jpg)"
-});
-
-const NavRow = glamorous.div({
-  flex: 1,
-  display: "flex",
-  flexFlow: "row wrap"
 });
 
 const NavCol = glamorous.div({
@@ -55,12 +41,6 @@ const LogoCol = glamorous.div({
   flexDirection: "column"
 });
 
-const Img = glamorous.img({
-  width: 400,
-  height: "auto",
-  margin: "50px 40px"
-});
-
 const HeaderRow = glamorous.div({
   flex: 1,
   fontSize: 52,
@@ -70,3 +50,5 @@ const HeaderRow = glamorous.div({
   margin: "0px 102px",
   textAlign: "center"
 });
+
+export default Hero;

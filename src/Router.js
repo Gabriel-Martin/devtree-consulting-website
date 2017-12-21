@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import { BrowserRouter, Route } from "react-router-dom";
 
-import { Navbar } from "./components";
 import { Home, Portfolio, ContactUs } from "./views";
 
 class Router extends Component {

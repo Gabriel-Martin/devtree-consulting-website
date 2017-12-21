@@ -1,35 +1,68 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import glamorous from "glamorous";
 
 class HeroNavBar extends Component {
   render() {
     return (
-      <Menu>
-        <Item>
-          <NavLink to={"/"}>Home</NavLink>
-        </Item>
-        <Item>About Us</Item>
-        <Item>
-          <HashLink to={"/#process"}>Process</HashLink>
-        </Item>
-        <Item>Our Team</Item>
-        <Item>
-          <NavLink to={"/contact-us"}>Contact</NavLink>
-        </Item>
-      </Menu>
+      <Container>
+        <NavBar>
+          <LogoContainer onClick={() => this.props.history.push("/")}>
+            <Logo src={"images/general/hero-logo.png"} />
+          </LogoContainer>
+
+          <NavContainer>
+            <Item>
+              <HashLink to={"#process"}>Process</HashLink>
+            </Item>
+            <Item>
+              <HashLink to={"#our-team"}>Our Team</HashLink>
+            </Item>
+            <Item>
+              <NavLink to={"/portfolio"}>Portfolio</NavLink>
+            </Item>
+            <Item>
+              <NavLink to={"/contact-us"}>Contact</NavLink>
+            </Item>
+          </NavContainer>
+        </NavBar>
+      </Container>
     );
   }
 }
 
-export default HeroNavBar;
-
-const Menu = glamorous.div({
+const Container = glamorous.div(props => ({
   flex: 1,
   display: "flex",
-  margin: "40px 40px"
+  flexFlow: "row wrap"
+}));
+
+const NavBar = glamorous.div({
+  flex: 1,
+  height: 100,
+  display: "flex",
+  alignItems: "center",
+  flexFlow: "row wrap"
 });
+
+const LogoContainer = glamorous.div(props => ({
+  flex: 1,
+  display: "flex",
+  justifyContent: "center"
+}));
+
+const Logo = glamorous.img({
+  width: 400,
+  height: "auto"
+});
+
+const NavContainer = glamorous.div(props => ({
+  flex: 1,
+  display: "flex",
+  display: "flex",
+  justifyContent: "flex-end"
+}));
 
 const Item = glamorous.div({
   margin: 20,
@@ -37,3 +70,5 @@ const Item = glamorous.div({
   fontWeight: 100,
   color: "#F2F2F2"
 });
+
+export default withRouter(HeroNavBar);

@@ -9,7 +9,7 @@ import OurPhilosophy from "./OurPhilosophy";
 class OurTeam extends Component {
   render() {
     return (
-      <Container>
+      <Container id={"our-team"}>
         <HeaderRow>
           <OurTeamHeader />
         </HeaderRow>
