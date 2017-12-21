@@ -32,6 +32,8 @@ class HeroNavBar extends Component {
   }
 }
 
+const mediaQuery = "@media screen and (max-width: 920px)";
+
 const Container = glamorous.div(props => ({
   flex: 1,
   display: "flex",
@@ -50,7 +52,11 @@ const NavBar = glamorous.div({
 const LogoContainer = glamorous.div(props => ({
   flex: 1,
   display: "flex",
-  justifyContent: "flex-start"
+  justifyContent: "flex-start",
+  [mediaQuery]: {
+    marginTop: 20,
+    justifyContent: "center"
+  }
 }));
 
 const Logo = glamorous.img({
@@ -61,10 +67,14 @@ const Logo = glamorous.img({
 const NavContainer = glamorous.div(props => ({
   flex: 1,
   display: "flex",
-  justifyContent: "flex-end"
+  justifyContent: "flex-end",
+  [mediaQuery]: {
+    justifyContent: "center"
+  }
 }));
 
 const Item = glamorous.div({
+  width: 74,
   margin: 20,
   fontSize: 18,
   fontWeight: 100,

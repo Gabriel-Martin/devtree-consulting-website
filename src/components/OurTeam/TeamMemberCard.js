@@ -49,13 +49,10 @@ const Img = glamorous.img({
 const CardFooter = glamorous.div({
   flex: 1,
   display: "flex",
+  padding: "5px 10px",
   flexDirection: "column"
 });
 
-const Name = glamorous.div({
-  margin: "1px 3px"
-});
+const Name = glamorous.div({});
 
-const Position = glamorous.div({
-  margin: "1px 3px"
-});
+const Position = glamorous.div({});

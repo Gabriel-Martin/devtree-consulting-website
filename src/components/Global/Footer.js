@@ -110,3 +110,5 @@ const Anchor = glamorous.a(props => ({
   color: "#f1efef",
   textDecoration: "none !important"
 }));
+
+export default withRouter(Footer);
