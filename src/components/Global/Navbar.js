@@ -17,10 +17,10 @@ class HeroNavBar extends Component {
 
           <NavContainer>
             <Item>
-              <HashLink to={"#process"}>Process</HashLink>
+              <HashLink to={"/#process"}>Process</HashLink>
             </Item>
             <Item>
-              <HashLink to={"#our-team"}>Our Team</HashLink>
+              <HashLink to={"/#our-team"}>Our Team</HashLink>
             </Item>
             <Item>
               <NavLink to={"/portfolio"}>Portfolio</NavLink>

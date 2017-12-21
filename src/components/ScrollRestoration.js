@@ -6,7 +6,7 @@ class ScrollRestoration extends Component {
   }
 
   render() {
-    return this.props.children;
+    return null;
   }
 }
 

@@ -4,10 +4,20 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 
 class Footer extends Component {
+  home = () => {
+    let { pathname } = this.props.history.location;
+    if (pathname === "/") {
+      this.props.history.push("/");
+      window.scrollTo(0, 0);
+    } else {
+      this.props.history.push("/");
+    }
+  };
+
   render() {
     return (
       <Container>
-        <LogoCol onClick={() => this.props.history.push("/")}>
+        <LogoCol onClick={this.home}>
           <Img src={"images/general/hero-logo.png"} />
         </LogoCol>
         <ContactCol>
@@ -43,8 +53,6 @@ class Footer extends Component {
     );
   }
 }
-
-export default withRouter(Footer);
 
 const Img = glamorous.img({
   width: 400,
@@ -88,3 +96,5 @@ const LinksCol = glamorous.div({
 const Item = glamorous.div({
   margin: 5
 });
+
+export default withRouter(Footer);
