@@ -24,7 +24,7 @@ const Container = glamorous.div({
   justifyContent: "center",
   color: "rgb(239, 239, 239)",
   backgroundImage:
-    "linear-gradient(to bottom, rgba(107,35,35,0.64), rgba(107,35,35,0.64)), url(images/general/contact-us.jpg)"
+    "linear-gradient(to right, rgba(231, 76, 60, .5),rgba(76,76,77,0.72), rgba(43, 209, 181,.5)),  url(images/general/contact-us.jpg)"
 });
 
 const Header = glamorous.h1({});

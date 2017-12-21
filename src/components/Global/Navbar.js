@@ -58,7 +58,8 @@ const LogoContainer = glamorous.div(props => ({
 
 const Logo = glamorous.img({
   width: 400,
-  height: "auto"
+  height: "auto",
+  cursor: "pointer"
 });
 
 const NavContainer = glamorous.div(props => ({
