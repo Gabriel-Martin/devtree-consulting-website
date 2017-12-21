@@ -1,64 +1,75 @@
 import React, { Component } from "react";
+import { NavLink, withRouter } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import glamorous from "glamorous";
-import { NavLink } from "react-router-dom";
 
-class Navbar extends Component {
+class HeroNavBar extends Component {
   render() {
     return (
       <Container>
-        <Column1>
-          <h1>LOGO</h1>
-        </Column1>
-        <Column2>
-          <Menu>
-            <Items>
-              <NavLink to={"/"}>Home</NavLink>
-            </Items>
-            <Items>About Us</Items>
-            <Items>Process</Items>
-            <Items>Our Team</Items>
-            <Items>
+        <NavBar>
+          <LogoContainer>
+            <Logo src={"images/general/nav-logo.png"} />
+          </LogoContainer>
+
+          <NavContainer>
+            <Item>
+              <HashLink to={"#process"}>Process</HashLink>
+            </Item>
+            <Item>
+              <HashLink to={"#our-team"}>Our Team</HashLink>
+            </Item>
+            <Item>
+              <NavLink to={"/portfolio"}>Portfolio</NavLink>
+            </Item>
+            <Item>
               <NavLink to={"/contact-us"}>Contact</NavLink>
-            </Items>
-          </Menu>
-        </Column2>
+            </Item>
+          </NavContainer>
+        </NavBar>
       </Container>
     );
   }
 }
 
-export default Navbar;
-
-const Items = glamorous.h2({
-  margin: "20px"
-});
-
-const Container = glamorous.div({
-  flex: 1,
-  flexDirection: "row",
-  display: "flex",
-  backgroundColor: "#FDFAFA",
-  width: 1440,
-  height: 104
-});
-
-const Column1 = glamorous.div({
+const Container = glamorous.div(props => ({
   flex: 1,
   display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  margin: "20px"
+  flexFlow: "row wrap"
+}));
+
+const NavBar = glamorous.div({
+  flex: 1,
+  height: 120,
+  display: "flex",
+  margin: "0px 20px",
+  alignItems: "center",
+  flexFlow: "row wrap"
 });
 
-const Column2 = glamorous.div({
+const LogoContainer = glamorous.div(props => ({
   flex: 1,
   display: "flex",
-  flexDirection: "column"
+  justifyContent: "flex-start"
+}));
+
+const Logo = glamorous.img({
+  width: 400,
+  height: "auto"
 });
 
-const Menu = glamorous.div({
-  flex: 2,
-  flexDirection: "row",
+const NavContainer = glamorous.div(props => ({
+  flex: 1,
   display: "flex",
-  alignItems: "center"
+  display: "flex",
+  justifyContent: "flex-end"
+}));
+
+const Item = glamorous.div({
+  margin: 20,
+  fontSize: 18,
+  fontWeight: 100,
+  color: "#F2F2F2"
 });
+
+export default withRouter(HeroNavBar);

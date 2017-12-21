@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { NavLink, withRouter } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { NavLink as Link, withRouter } from "react-router-dom";
+import { HashLink as HLink } from "react-router-hash-link";
 import glamorous from "glamorous";
 
 class HeroNavBar extends Component {
@@ -8,16 +8,16 @@ class HeroNavBar extends Component {
     return (
       <Container>
         <NavBar>
-          <LogoContainer onClick={() => this.props.history.push("/")}>
+          <LogoContainer>
             <Logo src={"images/general/hero-logo.png"} />
           </LogoContainer>
 
           <NavContainer>
             <Item>
-              <HashLink to={"#process"}>Process</HashLink>
+              <HLink to={"#process"}>Process</HLink>
             </Item>
             <Item>
-              <HashLink to={"#our-team"}>Our Team</HashLink>
+              <HLink to={"#our-team"}>Our Team</HLink>
             </Item>
             <Item>
               <NavLink to={"/portfolio"}>Portfolio</NavLink>
@@ -40,8 +40,9 @@ const Container = glamorous.div(props => ({
 
 const NavBar = glamorous.div({
   flex: 1,
-  height: 100,
+  height: 120,
   display: "flex",
+  margin: "0px 20px",
   alignItems: "center",
   flexFlow: "row wrap"
 });
@@ -49,7 +50,7 @@ const NavBar = glamorous.div({
 const LogoContainer = glamorous.div(props => ({
   flex: 1,
   display: "flex",
-  justifyContent: "center"
+  justifyContent: "flex-start"
 }));
 
 const Logo = glamorous.img({
@@ -70,5 +71,10 @@ const Item = glamorous.div({
   fontWeight: 100,
   color: "#F2F2F2"
 });
+
+const NavLink = glamorous(Link)(props => ({
+  color: "#f1efef",
+  textDecoration: "none !important"
+}));
 
 export default withRouter(HeroNavBar);
