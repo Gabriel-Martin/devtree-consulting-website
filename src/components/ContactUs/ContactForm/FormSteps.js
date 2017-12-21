@@ -21,7 +21,8 @@ const Container = glamorous.div({
   margin: 80,
   height: 50,
   display: "flex",
-  justifyContent: "center"
+  justifyContent: "center",
+  boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)"
 });
 
 const Step1 = glamorous.div({
