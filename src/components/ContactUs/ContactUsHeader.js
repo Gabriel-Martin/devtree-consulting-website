@@ -27,4 +27,6 @@ const Container = glamorous.div({
     "linear-gradient(to right, rgba(231, 76, 60, .5),rgba(76,76,77,0.72), rgba(43, 209, 181,.5)),  url(images/general/contact-us.jpg)"
 });
 
-const Header = glamorous.h1({});
+const Header = glamorous.h1({
+  color: "#FDFAFA"
+});
