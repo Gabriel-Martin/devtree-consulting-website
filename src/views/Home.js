@@ -3,6 +3,7 @@ import {
   Footer,
   OurTeam,
   BuildProcess,
+  ScrollRestoration,
   CompanyDescription
 } from "../components";
 
@@ -12,6 +13,7 @@ class Home extends Component {
   render() {
     return (
       <div>
+        <ScrollRestoration />
         <Hero />
         <CompanyDescription />
         <BuildProcess />

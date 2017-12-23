@@ -22,40 +22,45 @@ class Footer extends Component {
           <LogoCol onClick={this.home}>
             <Img src={"images/general/hero-logo.png"} />
           </LogoCol>
-          <ContactCol>
-            <Item>
-              <NavLink to={"/contact-us"}>Contact Us</NavLink>
-            </Item>
-            <Item>
-              <Anchor href={"tel:1-208-718-2633"}>208-718-2633</Anchor>
-            </Item>
-            <Item>
-              <Anchor href={"mailto:info@devtree.io"}>info@devtree.io</Anchor>
-            </Item>
-            <Item>
-              1224 Washington Ave, Suite 3 <br /> Sandpoint, Idaho 83864
-            </Item>
-          </ContactCol>
 
-          <LinksCol>
-            <Item>
-              <HashLink to={"/#who-we-are"}> About Us </HashLink>
-            </Item>
-            <Item>
-              <NavLink to={"/portfolio"}> Portfolio </NavLink>
-            </Item>
-            <Item>
-              <HashLink to={"/#our-team"}> Our Team </HashLink>
-            </Item>
-            <Item>
-              <HashLink to={"/#process"}> Process </HashLink>
-            </Item>
-          </LinksCol>
+          <InfoRow>
+            <ContactCol>
+              <Item>
+                <NavLink to={"/contact-us"}>Contact Us</NavLink>
+              </Item>
+              <Item>
+                <Anchor href={"tel:1-208-718-2633"}>208-718-2633</Anchor>
+              </Item>
+              <Item>
+                <Anchor href={"mailto:info@devtree.io"}>info@devtree.io</Anchor>
+              </Item>
+              <Item>
+                1224 Washington Ave, Suite 3 <br /> Sandpoint, Idaho 83864
+              </Item>
+            </ContactCol>
+
+            <LinksCol>
+              <Item>
+                <HashLink to={"/#who-we-are"}> About Us </HashLink>
+              </Item>
+              <Item>
+                <NavLink to={"/portfolio"}> Portfolio </NavLink>
+              </Item>
+              <Item>
+                <HashLink to={"/#our-team"}> Our Team </HashLink>
+              </Item>
+              <Item>
+                <HashLink to={"/#process"}> Process </HashLink>
+              </Item>
+            </LinksCol>
+          </InfoRow>
         </Container>
       </Fragment>
     );
   }
 }
+
+const mediaQuery = "@media screen and (max-width: 940px)";
 
 const Line = glamorous.div(props => ({
   backgroundImage: "linear-gradient(to right,#88498F,#2BD1B5,#2185DB,#C8473A)",
@@ -70,38 +75,59 @@ const Img = glamorous.img({
 });
 
 const Container = glamorous.div({
-  height: 226,
   width: "100%",
+  minHeight: 226,
   display: "flex",
   color: "#F1EFEF",
+  flexFlow: "row wrap",
   backgroundColor: "rgba(26, 27, 28, 0.78)"
 });
 
 const LogoCol = glamorous.div({
-  flex: 2,
+  flex: 1,
   padding: 10,
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center"
+  justifyContent: "center",
+  [mediaQuery]: {
+    alignItems: "center"
+  }
 });
+
+const InfoRow = glamorous.div(props => ({
+  flex: 1,
+  display: "flex",
+  justifyContent: "space-between"
+}));
 
 const ContactCol = glamorous.div({
   flex: 1,
+  minWidth: 220,
   display: "flex",
   alignItems: "flex-start",
   flexDirection: "column",
-  justifyContent: "center"
+  justifyContent: "center",
+  [mediaQuery]: {
+    alignItems: "center"
+  }
 });
 const LinksCol = glamorous.div({
   flex: 1,
+  minWidth: 220,
   display: "flex",
   alignItems: "flex-start",
   flexDirection: "column",
-  justifyContent: "center"
+  justifyContent: "center",
+  [mediaQuery]: {
+    alignItems: "center"
+  }
 });
 
 const Item = glamorous.div({
-  margin: 5
+  padding: 5,
+  [mediaQuery]: {
+    textAlign: "center"
+  }
 });
 
 const NavLink = glamorous(Link)(props => ({
