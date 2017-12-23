@@ -16,28 +16,28 @@ class PortfolioCard extends Component {
 
 const Container = glamorous.div({
   flex: 1,
-  flexDirection: "row",
   display: "flex",
   flexFlow: "row wrap",
+  flexDirection: "row",
   justifyContent: "space-between"
 });
 
 const Card = glamorous.div(props => ({
-  backgroundImage: `url("${props.image}")`,
-  backgroundSize: "cover",
+  opacity: 0.7,
   display: "flex",
+  backgroundSize: "cover",
   flexDirection: "column",
   minWidth: "calc(100vw / 3)",
   minHeight: "calc(100vw / 3)",
   filter: "grayscale(100%)",
-  transitionTimingFunction: "linear",
-  transitionDuration: ".5s",
-  opacity: 0.7,
+  transition: "all 0.15s linear",
+  backgroundImage: `url("${props.image}")`,
   ":hover": {
-    filter: "none",
     opacity: 1,
-    transitionTimingFunction: "linear",
-    transitionDuration: ".2s"
+    filter: "none",
+    transform: "scale(1.03)",
+    transition: "all 0.15s linear",
+    boxShadow: "0 14px 28px rgba(0,0,0,0.30), 0 10px 10px rgba(0,0,0,0.4)"
   }
 }));
 

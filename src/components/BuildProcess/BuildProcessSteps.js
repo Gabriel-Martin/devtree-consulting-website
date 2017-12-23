@@ -79,6 +79,7 @@ const BuildProcessSteps = props => {
 export default BuildProcessSteps;
 
 const Container = glamorous.div(props => ({
+  padding: 40,
   display: "flex",
   alignItems: "center",
   flexDirection: "column"
@@ -86,9 +87,10 @@ const Container = glamorous.div(props => ({
 
 const Header = glamorous.div(props => ({
   fontSize: 36,
-  color: "#2BD1B5",
   width: "auto",
-  textAlign: "center"
+  color: "#2BD1B5",
+  textAlign: "center",
+  padding: "20px 0px"
 }));
 
 const Line = glamorous.div(props => ({

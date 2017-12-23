@@ -9,7 +9,9 @@ class HeroNavBar extends Component {
       <Container>
         <NavBar>
           <LogoContainer>
-            <Logo src={"images/general/hero-logo.png"} />
+            <div>
+              <Logo src={"images/general/hero-logo.png"} />
+            </div>
           </LogoContainer>
 
           <NavContainer>

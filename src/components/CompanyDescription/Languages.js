@@ -20,6 +20,7 @@ export default Languages;
 
 const Container = glamorous.div({
   height: 115,
+  padding: 40,
   display: "flex",
   alignItems: "center",
   backgroundColor: "#4C4C4D",

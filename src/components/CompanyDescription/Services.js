@@ -3,7 +3,7 @@ import glamorous from "glamorous";
 class Services extends Component {
   render() {
     return (
-      <div>
+      <Container>
         <Container1>
           <Text1>Services</Text1>
           <Line />
@@ -17,12 +17,10 @@ class Services extends Component {
             Ipsum has the stamina.
           </Text2>
         </Container2>
-      </div>
+      </Container>
     );
   }
 }
-
-export default Services;
 
 const Line = glamorous.div(props => ({
   height: "10px",
@@ -30,17 +28,20 @@ const Line = glamorous.div(props => ({
   backgroundColor: "rgba(43,209,181,1)"
 }));
 
+const Container = glamorous.div({
+  padding: 20,
+  backgroundColor: "#C7C7C7"
+});
+
 const Container1 = glamorous.div({
-  height: 150,
-  backgroundColor: "#C7C7C7",
-  alignItems: "center",
+  padding: 20,
   display: "flex",
+  alignItems: "center",
   flexDirection: "column"
 });
 
 const Container2 = glamorous.div({
-  height: 137,
-  backgroundColor: "#C7C7C7"
+  padding: 20
 });
 
 const Text1 = glamorous.h2({
@@ -51,3 +52,5 @@ const Text1 = glamorous.h2({
 const Text2 = glamorous.div({
   textAlign: "center"
 });
+
+export default Services;

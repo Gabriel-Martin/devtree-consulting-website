@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd": "^3.0.2",
     "glamor": "^2.20.40",
     "glamorous": "^4.11.0",
     "prop-type": "^0.0.1",
@@ -12,7 +11,9 @@
     "react-router-dom": "^4.2.2",
     "react-router-hash-link": "^1.1.1",
     "react-scripts": "1.0.17",
-    "react-vertical-timeline-component": "^2.0.1"
+    "react-vertical-timeline-component": "^2.0.1",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.77.1"
   },
   "scripts": {
     "start": "react-app-rewired start",

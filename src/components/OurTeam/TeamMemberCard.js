@@ -16,14 +16,18 @@ const TeamMemberCard = props => {
   );
 };
 
-export default TeamMemberCard;
-
 const Card = glamorous.div(props => ({
   width: 242,
   margin: 20,
   display: "flex",
   flexDirection: "column",
-  boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)"
+  transition: "all .2s ease-in-out",
+  boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)",
+  ":hover": {
+    transform: "scale(1.01)",
+    transition: "all .2s ease-in-out",
+    boxShadow: "0px 0px 10px rgba(0, 0, 0, 1)"
+  }
 }));
 
 const ImgWell = glamorous.div(props => ({
@@ -37,12 +41,11 @@ const Img = glamorous.img({
   width: "100%",
   height: "auto",
   filter: "grayscale(100%)",
-  transitionTimingFunction: "linear",
-  transitionDuration: ".5s",
+  transition: "filter .2s linear",
+  transition: "all .2s ease-in-out",
   ":hover": {
     filter: "none",
-    transitionTimingFunction: "linear",
-    transitionDuration: ".5s"
+    transition: "all .2s ease-in-out"
   }
 });
 
@@ -56,3 +59,5 @@ const CardFooter = glamorous.div({
 const Name = glamorous.div({});
 
 const Position = glamorous.div({});
+
+export default TeamMemberCard;

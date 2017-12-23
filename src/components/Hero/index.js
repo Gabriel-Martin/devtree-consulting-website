@@ -11,7 +11,8 @@ class Hero extends Component {
         <HeroNavBar />
 
         <HeaderRow>
-          Releasing potential for any <br /> business
+          <div>Release your potential, </div>
+          <div>achieve your goals.</div>
         </HeaderRow>
       </Container>
     );
@@ -44,11 +45,10 @@ const Container = glamorous.div({
 const HeaderRow = glamorous.div({
   flex: 1,
   fontSize: 52,
+  lineHeight: "52px",
   fontWeight: 100,
-  display: "flex",
   color: "#F2F2F2",
-  margin: "0px 102px",
-  textAlign: "center"
+  margin: "0px 102px"
 });
 
 export default Hero;

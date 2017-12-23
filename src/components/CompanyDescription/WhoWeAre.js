@@ -4,7 +4,7 @@ import glamorous from "glamorous";
 class WhoWeAre extends Component {
   render() {
     return (
-      <div>
+      <Container>
         <Container1 id={"who-we-are"}>
           <Text1>Who We Are</Text1>
           <Line />
@@ -18,12 +18,10 @@ class WhoWeAre extends Component {
             Ipsum has the stamina.
           </Text2>
         </Container2>
-      </div>
+      </Container>
     );
   }
 }
-
-export default WhoWeAre;
 
 const Line = glamorous.div(props => ({
   height: "10px",
@@ -31,15 +29,19 @@ const Line = glamorous.div(props => ({
   backgroundColor: "rgba(43,209,181,1)"
 }));
 
+const Container = glamorous.div({
+  padding: 20
+});
+
 const Container1 = glamorous.div({
-  height: 150,
-  alignItems: "center",
+  padding: 20,
   display: "flex",
+  alignItems: "center",
   flexDirection: "column"
 });
 
 const Container2 = glamorous.div({
-  height: 137
+  padding: 20
 });
 
 const Text1 = glamorous.h2({
@@ -47,6 +49,8 @@ const Text1 = glamorous.h2({
   fontSize: 36
 });
 
-const Text2 = glamorous.p({
+const Text2 = glamorous.div({
   textAlign: "center"
 });
+
+export default WhoWeAre;
