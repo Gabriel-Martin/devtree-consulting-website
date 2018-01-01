@@ -23,7 +23,8 @@ const Container = glamorous.div({
   alignItems: "center",
   backgroundSize: "cover",
   justifyContent: "center",
-  backgroundPositionY: "-100px",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
   backgroundImage:
     "linear-gradient(to bottom, rgba(38,84,124,0.54), rgba(38,84,124,0.54)), url(images/team/build-process.jpg)"
 });

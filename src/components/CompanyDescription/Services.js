@@ -29,8 +29,8 @@ const Line = glamorous.div(props => ({
 }));
 
 const Container = glamorous.div({
-  padding: 20,
-  backgroundColor: "#C7C7C7"
+  padding: 20
+  // backgroundColor: "#C7C7C7"
 });
 
 const Container1 = glamorous.div({

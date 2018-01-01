@@ -1,21 +1,21 @@
+import React, { Component, Fragment } from "react";
+
 import {
   ContactUsComponent,
+  ScrollRestoration,
   Footer,
-  Navbar,
-  ScrollRestoration
+  Navbar
 } from "../components";
-
-import React, { Component } from "react";
 
 class ContactUs extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <ScrollRestoration />
         <Navbar />
         <ContactUsComponent />
         <Footer />
-      </div>
+      </Fragment>
     );
   }
 }

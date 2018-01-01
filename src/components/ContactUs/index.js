@@ -16,10 +16,10 @@ class ContactUsComponent extends Component {
   }
 }
 
-export default ContactUsComponent;
-
 const Container = glamorous.div({
   display: "flex",
   alignItems: "center",
   flexDirection: "column"
 });
+
+export default ContactUsComponent;

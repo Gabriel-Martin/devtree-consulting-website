@@ -1,11 +1,11 @@
-@import url("~semantic-ui-css/semantic.min.css");
-
 * {
   font-family: "Barlow", sans-serif !important;
 }
 
 body {
-  margin: 0px;
+  padding: 0;
+  max-width: 1600px;
+  margin: 0px auto !important;
   background-color: #fdfafa !important;
 }
 

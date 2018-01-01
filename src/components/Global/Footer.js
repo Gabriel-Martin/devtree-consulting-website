@@ -19,11 +19,11 @@ class Footer extends Component {
       <Fragment>
         <Line />
         <Container>
-          <LogoCol onClick={this.home}>
-            <Img src={"images/general/hero-logo.png"} />
-          </LogoCol>
+          <LogoContainer onClick={this.home}>
+            <Logo src={"images/general/hero-logo.png"} />
+          </LogoContainer>
 
-          <InfoRow>
+          <LinksContainer>
             <ContactCol>
               <Item>
                 <NavLink to={"/contact-us"}>Contact Us</NavLink>
@@ -35,7 +35,8 @@ class Footer extends Component {
                 <Anchor href={"mailto:info@devtree.io"}>info@devtree.io</Anchor>
               </Item>
               <Item>
-                1224 Washington Ave, Suite 3 <br /> Sandpoint, Idaho 83864
+                <p>1224 Washington Ave, Suite 3</p>{" "}
+                <p>Sandpoint, Idaho 83864</p>
               </Item>
             </ContactCol>
 
@@ -53,81 +54,73 @@ class Footer extends Component {
                 <HashLink to={"/#process"}> Process </HashLink>
               </Item>
             </LinksCol>
-          </InfoRow>
+          </LinksContainer>
         </Container>
       </Fragment>
     );
   }
 }
 
-const mediaQuery = "@media screen and (max-width: 940px)";
+const mediaQuery = "@media screen and (max-width: 1084px)";
 
 const Line = glamorous.div(props => ({
-  backgroundImage: "linear-gradient(to right,#88498F,#2BD1B5,#2185DB,#C8473A)",
-  height: "8px"
+  height: "8px",
+  backgroundImage: "linear-gradient(to right,#88498F,#2BD1B5,#2185DB,#C8473A)"
 }));
-
-const Img = glamorous.img({
-  width: 400,
-  height: "auto",
-  margin: "0px 40px",
-  cursor: "pointer"
-});
 
 const Container = glamorous.div({
   width: "100%",
   minHeight: 226,
   display: "flex",
+  padding: 40,
   color: "#F1EFEF",
-  flexFlow: "row wrap",
-  backgroundColor: "rgba(26, 27, 28, 0.78)"
-});
-
-const LogoCol = glamorous.div({
-  flex: 1,
-  padding: 10,
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
+  flexWrap: "wrap",
+  alignItems: "center",
+  justifyContent: "space-between",
+  backgroundColor: "rgba(26, 27, 28, 0.78)",
   [mediaQuery]: {
-    alignItems: "center"
+    justifyContent: "center"
   }
 });
 
-const InfoRow = glamorous.div(props => ({
-  flex: 1,
+const LogoContainer = glamorous.div(props => ({
+  minWidth: 300,
+  maxWidth: 400
+}));
+
+const Logo = glamorous.img({
+  width: "100%",
+  height: "auto",
+  cursor: "pointer"
+});
+
+const LinksContainer = glamorous.div(props => ({
+  minWidth: 300,
   display: "flex",
-  justifyContent: "space-between"
+  flexWrap: "wrap-reverse",
+  justifyContent: "center"
 }));
 
 const ContactCol = glamorous.div({
-  flex: 1,
-  minWidth: 220,
+  padding: 20,
+  minWidth: 300,
   display: "flex",
-  alignItems: "flex-start",
+  alignItems: "center",
   flexDirection: "column",
-  justifyContent: "center",
-  [mediaQuery]: {
-    alignItems: "center"
-  }
+  justifyContent: "center"
 });
 const LinksCol = glamorous.div({
-  flex: 1,
-  minWidth: 220,
+  padding: 20,
+  minWidth: 300,
   display: "flex",
-  alignItems: "flex-start",
+  alignItems: "center",
   flexDirection: "column",
-  justifyContent: "center",
-  [mediaQuery]: {
-    alignItems: "center"
-  }
+  justifyContent: "center"
 });
 
 const Item = glamorous.div({
   padding: 5,
-  [mediaQuery]: {
-    textAlign: "center"
-  }
+  textAlign: "center"
 });
 
 const NavLink = glamorous(Link)(props => ({

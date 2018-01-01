@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { NavLink as Link, withRouter } from "react-router-dom";
 import { HashLink as HLink } from "react-router-hash-link";
 import glamorous from "glamorous";
@@ -6,7 +6,7 @@ import glamorous from "glamorous";
 class HeroNavBar extends Component {
   render() {
     return (
-      <Container>
+      <Fragment>
         <NavBar>
           <LogoContainer>
             <Logo
@@ -30,58 +30,52 @@ class HeroNavBar extends Component {
             </Item>
           </NavContainer>
         </NavBar>
-      </Container>
+      </Fragment>
     );
   }
 }
 
-const mediaQuery = "@media screen and (max-width: 920px)";
-
-const Container = glamorous.div(props => ({
-  flex: 1,
-  display: "flex",
-  flexFlow: "row wrap"
-}));
+const mediaQuery = "@media screen and (max-width: 880px)";
 
 const NavBar = glamorous.div({
-  flex: 1,
-  height: 120,
+  width: "100%",
+  minHeight: 120,
   display: "flex",
-  margin: "0px 20px",
+  padding: 40,
+  flexWrap: "wrap",
   alignItems: "center",
-  flexFlow: "row wrap"
+  justifyContent: "space-between",
+  [mediaQuery]: {
+    justifyContent: "center"
+  }
 });
 
 const LogoContainer = glamorous.div(props => ({
-  flex: 1,
-  display: "flex",
-  justifyContent: "flex-start",
-  [mediaQuery]: {
-    marginTop: 20,
-    justifyContent: "center"
-  }
+  minWidth: 300,
+  maxWidth: 400
 }));
 
 const Logo = glamorous.img({
-  width: 400,
+  width: "100%",
   height: "auto",
   cursor: "pointer"
 });
 
 const NavContainer = glamorous.div(props => ({
-  flex: 1,
+  width: 400,
+  padding: 20,
+  minWidth: 300,
   display: "flex",
-  justifyContent: "flex-end",
+  justifyContent: "space-between",
   [mediaQuery]: {
     justifyContent: "center"
   }
 }));
 
 const Item = glamorous.div({
-  width: 74,
-  margin: 20,
   fontSize: 18,
   fontWeight: 100,
+  padding: "0px 5px",
   color: "#F2F2F2"
 });
 
@@ -92,6 +86,7 @@ const NavLink = glamorous(Link)(props => ({
 
 const HashLink = glamorous(HLink)(props => ({
   color: "black",
+  whiteSpace: "nowrap",
   textDecoration: "none !important"
 }));
 

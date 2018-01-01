@@ -41,7 +41,6 @@ const Img = glamorous.img({
   width: "100%",
   height: "auto",
   filter: "grayscale(100%)",
-  transition: "filter .2s linear",
   transition: "all .2s ease-in-out",
   ":hover": {
     filter: "none",

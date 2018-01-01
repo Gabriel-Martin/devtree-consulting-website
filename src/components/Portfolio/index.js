@@ -1,15 +1,15 @@
 import OurWorkHeader from "./OurWorkHeader";
 import PortfolioCard from "./PortfolioCard";
 
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 class PortfolioComponent extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <OurWorkHeader />
         <PortfolioCard />
-      </div>
+      </Fragment>
     );
   }
 }
