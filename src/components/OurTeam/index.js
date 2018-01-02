@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { Navbar, Footer } from "../Global";
+
 import glamorous from "glamorous";
 
 import OurTeamHeader from "./OurTeamHeader";
@@ -10,6 +12,7 @@ class OurTeam extends Component {
   render() {
     return (
       <Container id={"our-team"}>
+        <Navbar />
         <HeaderRow>
           <OurTeamHeader />
         </HeaderRow>
@@ -40,6 +43,7 @@ class OurTeam extends Component {
           />
         </CardRow>
         <OurPhilosophy />
+        <Footer />
       </Container>
     );
   }

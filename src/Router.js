@@ -3,6 +3,7 @@ import React, { Component, Fragment } from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import { Home, Portfolio, ContactUs } from "./views";
+import { OurTeam } from "./components";
 
 class Router extends Component {
   render() {
@@ -13,6 +14,7 @@ class Router extends Component {
             <Route exact path={"/"} component={Home} />
             <Route exact path={"/portfolio"} component={Portfolio} />
             <Route exact path={"/contact-us"} component={ContactUs} />
+            <Route exact path={"/our-team"} component={OurTeam} />
             <Redirect to={"/"} />
           </Switch>
         </Fragment>

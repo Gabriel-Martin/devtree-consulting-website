@@ -1,7 +1,7 @@
 import {
   Hero,
   Footer,
-  OurTeam,
+  // OurTeam,
   BuildProcess,
   ScrollRestoration,
   CompanyDescription
@@ -17,7 +17,6 @@ class Home extends Component {
         <Hero />
         <CompanyDescription />
         <BuildProcess />
-        <OurTeam />
         <Footer />
       </div>
     );
